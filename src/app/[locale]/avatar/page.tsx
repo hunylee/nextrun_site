@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import {
     ArrowRight,
     Hand,
@@ -10,90 +11,92 @@ import {
     Video,
     Layers,
     Sparkles,
-    Check,
     Zap,
     Globe,
     Users
 } from "lucide-react";
 
-const techStack = [
-    {
-        step: 1,
-        title: "수화 캡처",
-        icon: Hand,
-        description: "모션캡처 장갑과 카메라로 수화통역사의 정밀한 동작을 실시간 캡처",
-        tech: ["Motion Capture Gloves", "Multi-Camera System", "Depth Sensing"],
-    },
-    {
-        step: 2,
-        title: "동작 인식",
-        icon: Eye,
-        description: "MediaPipe를 통해 손가락, 손목, 팔 동작을 정밀하게 분석",
-        tech: ["MediaPipe Hands", "Pose Estimation", "Real-time Tracking"],
-    },
-    {
-        step: 3,
-        title: "AI 처리",
-        icon: Cpu,
-        description: "sign-gemma3 모델로 수화 동작을 해석하고 자연스러운 표현 생성",
-        tech: ["sign-gemma3", "Transformer Model", "NLP Integration"],
-    },
-    {
-        step: 4,
-        title: "아바타 생성",
-        icon: Sparkles,
-        description: "고품질 실사 아바타가 자연스럽게 수화를 표현",
-        tech: ["3D Rendering", "Facial Animation", "Real-time Synthesis"],
-    },
-];
-
-const features = [
-    {
-        icon: Zap,
-        title: "실시간 처리",
-        description: "0.5초 이내의 빠른 응답으로 자연스러운 대화 흐름 유지",
-    },
-    {
-        icon: Layers,
-        title: "다양한 표현",
-        description: "50가지 이상의 수화 표현과 감정 표현 지원",
-    },
-    {
-        icon: Globe,
-        title: "다국어 지원",
-        description: "한국 수화(KSL)를 시작으로 글로벌 수화 지원 확대",
-    },
-    {
-        icon: Users,
-        title: "맞춤형 아바타",
-        description: "다양한 외형과 스타일의 아바타 선택 가능",
-    },
-];
-
-const useCases = [
-    {
-        title: "공공기관 안내",
-        description: "관공서, 병원, 은행 등에서 청각장애인을 위한 안내 서비스",
-        image: "🏛️",
-    },
-    {
-        title: "교육 콘텐츠",
-        description: "온라인 강의, 교육 영상에 수화 통역 추가",
-        image: "📚",
-    },
-    {
-        title: "미디어 콘텐츠",
-        description: "뉴스, 드라마, 유튜브 영상에 수화 아바타 삽입",
-        image: "📺",
-    },
-    {
-        title: "기업 서비스",
-        description: "고객 상담, 제품 설명 등 기업 서비스에 적용",
-        image: "🏢",
-    },
-];
-
 export default function AvatarPage() {
+    const locale = useLocale();
+    const t = useTranslations("avatar");
+
+    const techStack = [
+        {
+            step: 1,
+            title: t("pipeline.step1.title"),
+            icon: Hand,
+            description: t("pipeline.step1.description"),
+            tech: ["Motion Capture Gloves", "Multi-Camera System", "Depth Sensing"],
+        },
+        {
+            step: 2,
+            title: t("pipeline.step2.title"),
+            icon: Eye,
+            description: t("pipeline.step2.description"),
+            tech: ["MediaPipe Hands", "Pose Estimation", "Real-time Tracking"],
+        },
+        {
+            step: 3,
+            title: t("pipeline.step3.title"),
+            icon: Cpu,
+            description: t("pipeline.step3.description"),
+            tech: ["sign-gemma3", "Transformer Model", "NLP Integration"],
+        },
+        {
+            step: 4,
+            title: t("pipeline.step4.title"),
+            icon: Sparkles,
+            description: t("pipeline.step4.description"),
+            tech: ["3D Rendering", "Facial Animation", "Real-time Synthesis"],
+        },
+    ];
+
+    const features = [
+        {
+            icon: Zap,
+            title: t("features.realtime.title"),
+            description: t("features.realtime.description"),
+        },
+        {
+            icon: Layers,
+            title: t("features.expressions.title"),
+            description: t("features.expressions.description"),
+        },
+        {
+            icon: Globe,
+            title: t("features.multilang.title"),
+            description: t("features.multilang.description"),
+        },
+        {
+            icon: Users,
+            title: t("features.custom.title"),
+            description: t("features.custom.description"),
+        },
+    ];
+
+    const useCases = [
+        {
+            title: t("useCases.public.title"),
+            description: t("useCases.public.description"),
+            image: "🏛️",
+        },
+        {
+            title: t("useCases.education.title"),
+            description: t("useCases.education.description"),
+            image: "📚",
+        },
+        {
+            title: t("useCases.media.title"),
+            description: t("useCases.media.description"),
+            image: "📺",
+        },
+        {
+            title: t("useCases.business.title"),
+            description: t("useCases.business.description"),
+            image: "🏢",
+        },
+    ];
+
     return (
         <div className="min-h-screen pt-24">
             {/* Hero Section */}
@@ -109,15 +112,13 @@ export default function AvatarPage() {
                         className="text-center mb-20"
                     >
                         <span className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6">
-                            AI Sign Language Avatar
+                            {t("badge")}
                         </span>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                            실사 <span className="gradient-text">수화 아바타</span>
+                            {t("title1")} <span className="gradient-text">{t("title2")}</span>
                         </h1>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                            AI가 만들어내는 자연스럽고 정확한 수화 표현,
-                            <br />
-                            실제 수화통역사처럼 생동감 있는 아바타를 만나보세요
+                            {t("description")}
                         </p>
                     </motion.div>
 
@@ -139,8 +140,8 @@ export default function AvatarPage() {
                                     >
                                         <Video className="w-16 h-16 text-white" />
                                     </motion.div>
-                                    <p className="text-gray-400 text-lg">아바타 데모 영상</p>
-                                    <p className="text-gray-500 text-sm mt-2">Coming Soon</p>
+                                    <p className="text-gray-400 text-lg">{t("demo")}</p>
+                                    <p className="text-gray-500 text-sm mt-2">{t("comingSoon")}</p>
                                 </div>
                             </div>
                         </div>
@@ -158,10 +159,10 @@ export default function AvatarPage() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            기술 파이프라인
+                            {t("pipeline.title")}
                         </h2>
                         <p className="text-gray-400 max-w-xl mx-auto">
-                            수화 영상이 AI 아바타로 변환되는 과정
+                            {t("pipeline.description")}
                         </p>
                     </motion.div>
 
@@ -218,10 +219,10 @@ export default function AvatarPage() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            주요 특징
+                            {t("features.title")}
                         </h2>
                         <p className="text-gray-400 max-w-xl mx-auto">
-                            NextRun 수화 아바타만의 차별화된 기능
+                            {t("features.description")}
                         </p>
                     </motion.div>
 
@@ -260,10 +261,10 @@ export default function AvatarPage() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            활용 사례
+                            {t("useCases.title")}
                         </h2>
                         <p className="text-gray-400 max-w-xl mx-auto">
-                            다양한 분야에서 활용되는 수화 아바타 솔루션
+                            {t("useCases.description")}
                         </p>
                     </motion.div>
 
@@ -298,21 +299,21 @@ export default function AvatarPage() {
                         className="glass-card p-12 text-center"
                     >
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                            수화 아바타 도입을 원하시나요?
+                            {t("cta.title")}
                         </h2>
                         <p className="text-gray-400 mb-8">
-                            기업, 공공기관, 교육기관 등 다양한 분야에 맞춤형 솔루션을 제공합니다
+                            {t("cta.description")}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/contact" className="btn-glow inline-flex items-center gap-2">
-                                도입 문의
+                            <Link href={`/${locale}/contact`} className="btn-glow inline-flex items-center gap-2">
+                                {t("cta.button")}
                                 <ArrowRight size={18} />
                             </Link>
                             <Link
-                                href="/contact#partnership"
+                                href={`/${locale}/contact#partnership`}
                                 className="px-8 py-3 rounded-full border border-gray-600 text-gray-300 hover:border-purple-500 hover:text-white transition-all"
                             >
-                                파트너십 문의
+                                {t("cta.partnership")}
                             </Link>
                         </div>
                     </motion.div>

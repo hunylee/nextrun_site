@@ -3,21 +3,25 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-const navItems = [
-    { href: "/", label: "회사소개" },
-    { href: "/history", label: "연혁" },
-    { href: "/avatar", label: "아바타 소개" },
-    { href: "/location", label: "오시는 길" },
-    { href: "/contact", label: "Contact" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
+    const locale = useLocale();
+    const t = useTranslations("nav");
+
+    const navItems = [
+        { href: `/${locale}`, label: t("home") },
+        { href: `/${locale}/history`, label: t("history") },
+        { href: `/${locale}/avatar`, label: t("avatar") },
+        { href: `/${locale}/location`, label: t("location") },
+        { href: `/${locale}/contact`, label: t("contact") },
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,6 +30,13 @@ export default function Header() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    const isActivePath = (href: string) => {
+        if (href === `/${locale}`) {
+            return pathname === `/${locale}` || pathname === `/${locale}/`;
+        }
+        return pathname.startsWith(href);
+    };
 
     return (
         <header
@@ -37,7 +48,7 @@ export default function Header() {
             <nav className="max-w-7xl mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
+                    <Link href={`/${locale}`} className="flex items-center gap-2">
                         <motion.div
                             className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center"
                             whileHover={{ scale: 1.05 }}
@@ -54,13 +65,13 @@ export default function Header() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`relative py-2 text-sm font-medium transition-colors ${pathname === item.href
+                                className={`relative py-2 text-sm font-medium transition-colors ${isActivePath(item.href)
                                         ? "text-purple-400"
                                         : "text-gray-300 hover:text-white"
                                     }`}
                             >
                                 {item.label}
-                                {pathname === item.href && (
+                                {isActivePath(item.href) && (
                                     <motion.div
                                         layoutId="activeNav"
                                         className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500"
@@ -70,21 +81,27 @@ export default function Header() {
                         ))}
                     </div>
 
-                    {/* Contact Button (Desktop) */}
-                    <Link
-                        href="/contact"
-                        className="hidden md:block btn-glow text-sm"
-                    >
-                        문의하기
-                    </Link>
+                    {/* Right Side */}
+                    <div className="hidden md:flex items-center gap-4">
+                        <LanguageSwitcher />
+                        <Link
+                            href={`/${locale}/contact`}
+                            className="btn-glow text-sm"
+                        >
+                            {t("inquiry")}
+                        </Link>
+                    </div>
 
                     {/* Mobile Menu Button */}
-                    <button
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="md:hidden p-2 text-gray-300 hover:text-white"
-                    >
-                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
+                    <div className="flex md:hidden items-center gap-3">
+                        <LanguageSwitcher />
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="p-2 text-gray-300 hover:text-white"
+                        >
+                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </div>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -102,7 +119,7 @@ export default function Header() {
                                         key={item.href}
                                         href={item.href}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className={`py-2 text-center rounded-lg transition-colors ${pathname === item.href
+                                        className={`py-2 text-center rounded-lg transition-colors ${isActivePath(item.href)
                                                 ? "bg-purple-500/20 text-purple-400"
                                                 : "text-gray-300 hover:bg-white/5"
                                             }`}

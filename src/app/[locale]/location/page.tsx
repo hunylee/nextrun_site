@@ -1,50 +1,55 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { MapPin, Phone, Mail, Clock, Bus, Train, Car } from "lucide-react";
 
-const contactInfo = [
-    {
-        icon: MapPin,
-        label: "주소",
-        value: "서울특별시 강남구 테헤란로 123\nNextRun 빌딩 5층",
-    },
-    {
-        icon: Phone,
-        label: "전화",
-        value: "02-1234-5678",
-    },
-    {
-        icon: Mail,
-        label: "이메일",
-        value: "contact@nextrun.ai",
-    },
-    {
-        icon: Clock,
-        label: "영업시간",
-        value: "평일 09:00 - 18:00\n(주말 및 공휴일 휴무)",
-    },
-];
-
-const transportation = [
-    {
-        icon: Train,
-        title: "지하철",
-        description: "2호선 강남역 3번 출구에서 도보 5분",
-    },
-    {
-        icon: Bus,
-        title: "버스",
-        description: "강남역 정류장 하차 (146, 341, 360, 740)",
-    },
-    {
-        icon: Car,
-        title: "자가용",
-        description: "건물 내 지하주차장 이용 가능 (2시간 무료)",
-    },
-];
-
 export default function LocationPage() {
+    const t = useTranslations("location");
+
+    const contactInfo = [
+        {
+            icon: MapPin,
+            label: t("address.label"),
+            value: t("address.value"),
+        },
+        {
+            icon: Phone,
+            label: t("phone.label"),
+            value: t("phone.value"),
+        },
+        {
+            icon: Mail,
+            label: t("email.label"),
+            value: t("email.value"),
+        },
+        {
+            icon: Clock,
+            label: t("hours.label"),
+            value: t("hours.value"),
+        },
+    ];
+
+    const transportation = [
+        {
+            icon: Train,
+            title: t("transport.subway.title"),
+            description: t("transport.subway.description"),
+        },
+        {
+            icon: Bus,
+            title: t("transport.bus.title"),
+            description: t("transport.bus.description"),
+        },
+        {
+            icon: Car,
+            title: t("transport.car.title"),
+            description: t("transport.car.description"),
+        },
+    ];
+
+    const noticeItems = t.raw("notice.items") as string[];
+
     return (
         <div className="min-h-screen pt-24">
             {/* Hero Section */}
@@ -59,13 +64,13 @@ export default function LocationPage() {
                         className="text-center mb-16"
                     >
                         <span className="inline-block px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-sm font-medium mb-6">
-                            Location
+                            {t("badge")}
                         </span>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                            <span className="gradient-text">오시는 길</span>
+                            <span className="gradient-text">{t("title")}</span>
                         </h1>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                            NextRun 본사로 방문하시는 방법을 안내해 드립니다
+                            {t("description")}
                         </p>
                     </motion.div>
 
@@ -89,8 +94,7 @@ export default function LocationPage() {
                                             >
                                                 <MapPin className="w-8 h-8 text-white" />
                                             </motion.div>
-                                            <p className="text-white font-medium">서울특별시 강남구 테헤란로 123</p>
-                                            <p className="text-gray-400 text-sm mt-1">NextRun 빌딩 5층</p>
+                                            <p className="text-white font-medium whitespace-pre-line">{t("address.value")}</p>
                                         </div>
                                     </div>
 
@@ -162,7 +166,7 @@ export default function LocationPage() {
                         className="text-center mb-12"
                     >
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                            교통편 안내
+                            {t("transport.title")}
                         </h2>
                     </motion.div>
 
@@ -197,25 +201,15 @@ export default function LocationPage() {
                         className="glass-card p-8 md:p-12"
                     >
                         <h3 className="text-xl font-semibold text-white mb-6 text-center">
-                            방문 전 안내사항
+                            {t("notice.title")}
                         </h3>
                         <ul className="space-y-4 text-gray-400">
-                            <li className="flex items-start gap-3">
-                                <span className="w-2 h-2 mt-2 rounded-full bg-purple-500 flex-shrink-0" />
-                                <span>방문 일정은 사전에 연락 주시면 더욱 원활하게 안내해 드릴 수 있습니다.</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="w-2 h-2 mt-2 rounded-full bg-purple-500 flex-shrink-0" />
-                                <span>건물 1층 안내데스크에서 방문증을 수령하신 후 5층으로 올라오시면 됩니다.</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="w-2 h-2 mt-2 rounded-full bg-purple-500 flex-shrink-0" />
-                                <span>주차는 지하 1~3층에 가능하며, 방문 고객 2시간 무료 주차가 가능합니다.</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="w-2 h-2 mt-2 rounded-full bg-purple-500 flex-shrink-0" />
-                                <span>휠체어 접근이 가능한 엘리베이터가 있으며, 장애인 주차구역도 마련되어 있습니다.</span>
-                            </li>
+                            {noticeItems.map((item, index) => (
+                                <li key={index} className="flex items-start gap-3">
+                                    <span className="w-2 h-2 mt-2 rounded-full bg-purple-500 flex-shrink-0" />
+                                    <span>{item}</span>
+                                </li>
+                            ))}
                         </ul>
                     </motion.div>
                 </div>

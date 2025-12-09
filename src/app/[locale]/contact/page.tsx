@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import {
     Send,
     Mail,
@@ -14,55 +15,41 @@ import {
     ChevronDown
 } from "lucide-react";
 
-const contactMethods = [
-    {
-        icon: Mail,
-        title: "이메일",
-        value: "contact@nextrun.ai",
-        description: "24시간 내 답변드립니다",
-    },
-    {
-        icon: Phone,
-        title: "전화",
-        value: "02-1234-5678",
-        description: "평일 09:00 - 18:00",
-    },
-    {
-        icon: MapPin,
-        title: "방문",
-        value: "서울시 강남구 테헤란로 123",
-        description: "사전 예약 후 방문",
-    },
-];
-
-const inquiryTypes = [
-    { value: "product", label: "제품 문의" },
-    { value: "partnership", label: "파트너십 문의" },
-    { value: "demo", label: "데모 요청" },
-    { value: "support", label: "기술 지원" },
-    { value: "other", label: "기타 문의" },
-];
-
-const faqs = [
-    {
-        question: "수화 아바타 도입 비용은 어떻게 되나요?",
-        answer: "도입 비용은 사용 규모와 요구사항에 따라 다릅니다. 기본 구독형부터 기업 맞춤형까지 다양한 플랜을 제공하고 있습니다. 자세한 견적은 문의 양식을 통해 상담받으실 수 있습니다.",
-    },
-    {
-        question: "데모를 직접 체험해볼 수 있나요?",
-        answer: "네, 온라인 데모와 오프라인 시연 모두 가능합니다. 데모 요청을 해주시면 담당자가 연락드려 일정을 조율해 드립니다.",
-    },
-    {
-        question: "어떤 수화를 지원하나요?",
-        answer: "현재 한국 수화(KSL)를 지원하고 있으며, 2025년에는 미국 수화(ASL)와 일본 수화(JSL) 지원을 계획하고 있습니다.",
-    },
-    {
-        question: "API 연동이 가능한가요?",
-        answer: "네, REST API를 통해 기존 시스템에 쉽게 연동할 수 있습니다. 상세한 기술 문서와 SDK를 제공해 드립니다.",
-    },
-];
-
 export default function ContactPage() {
+    const locale = useLocale();
+    const t = useTranslations("contact");
+
+    const contactMethods = [
+        {
+            icon: Mail,
+            title: t("methods.email.title"),
+            value: t("methods.email.value"),
+            description: t("methods.email.description"),
+        },
+        {
+            icon: Phone,
+            title: t("methods.phone.title"),
+            value: t("methods.phone.value"),
+            description: t("methods.phone.description"),
+        },
+        {
+            icon: MapPin,
+            title: t("methods.visit.title"),
+            value: t("methods.visit.value"),
+            description: t("methods.visit.description"),
+        },
+    ];
+
+    const inquiryTypes = [
+        { value: "product", label: t("form.types.product") },
+        { value: "partnership", label: t("form.types.partnership") },
+        { value: "demo", label: t("form.types.demo") },
+        { value: "support", label: t("form.types.support") },
+        { value: "other", label: t("form.types.other") },
+    ];
+
+    const faqItems = t.raw("faq.items") as Array<{ question: string; answer: string }>;
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -100,15 +87,13 @@ export default function ContactPage() {
                         className="text-center mb-16"
                     >
                         <span className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6">
-                            Contact Us
+                            {t("badge")}
                         </span>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                            <span className="gradient-text">문의하기</span>
+                            <span className="gradient-text">{t("title")}</span>
                         </h1>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                            AI 수화 아바타 솔루션에 대해 궁금한 점이 있으시면
-                            <br />
-                            언제든 연락해 주세요
+                            {t("description")}
                         </p>
                     </motion.div>
 
@@ -143,7 +128,7 @@ export default function ContactPage() {
                         >
                             <div className="glass-card p-8">
                                 <h2 className="text-2xl font-bold text-white mb-6">
-                                    문의 양식
+                                    {t("form.title")}
                                 </h2>
 
                                 {isSubmitted ? (
@@ -156,16 +141,16 @@ export default function ContactPage() {
                                             <Send className="w-10 h-10 text-white" />
                                         </div>
                                         <h3 className="text-xl font-semibold text-white mb-2">
-                                            문의가 접수되었습니다!
+                                            {t("form.success.title")}
                                         </h3>
                                         <p className="text-gray-400">
-                                            빠른 시일 내에 답변드리겠습니다.
+                                            {t("form.success.description")}
                                         </p>
                                         <button
                                             onClick={() => setIsSubmitted(false)}
                                             className="mt-6 text-purple-400 hover:text-purple-300 transition-colors"
                                         >
-                                            새 문의하기
+                                            {t("form.success.newInquiry")}
                                         </button>
                                     </motion.div>
                                 ) : (
@@ -173,7 +158,7 @@ export default function ContactPage() {
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div>
                                                 <label className="block text-gray-300 text-sm font-medium mb-2">
-                                                    이름 *
+                                                    {t("form.name")} *
                                                 </label>
                                                 <input
                                                     type="text"
@@ -183,12 +168,12 @@ export default function ContactPage() {
                                                         setFormData({ ...formData, name: e.target.value })
                                                     }
                                                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
-                                                    placeholder="홍길동"
+                                                    placeholder={t("form.namePlaceholder")}
                                                 />
                                             </div>
                                             <div>
                                                 <label className="block text-gray-300 text-sm font-medium mb-2">
-                                                    이메일 *
+                                                    {t("form.email")} *
                                                 </label>
                                                 <input
                                                     type="email"
@@ -198,7 +183,7 @@ export default function ContactPage() {
                                                         setFormData({ ...formData, email: e.target.value })
                                                     }
                                                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
-                                                    placeholder="email@example.com"
+                                                    placeholder={t("form.emailPlaceholder")}
                                                 />
                                             </div>
                                         </div>
@@ -206,7 +191,7 @@ export default function ContactPage() {
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div>
                                                 <label className="block text-gray-300 text-sm font-medium mb-2">
-                                                    회사/기관
+                                                    {t("form.company")}
                                                 </label>
                                                 <input
                                                     type="text"
@@ -215,12 +200,12 @@ export default function ContactPage() {
                                                         setFormData({ ...formData, company: e.target.value })
                                                     }
                                                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
-                                                    placeholder="(선택사항)"
+                                                    placeholder={t("form.companyPlaceholder")}
                                                 />
                                             </div>
                                             <div>
                                                 <label className="block text-gray-300 text-sm font-medium mb-2">
-                                                    문의 유형 *
+                                                    {t("form.type")} *
                                                 </label>
                                                 <select
                                                     required
@@ -230,7 +215,7 @@ export default function ContactPage() {
                                                     }
                                                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-gray-700 text-white focus:outline-none focus:border-purple-500 transition-colors appearance-none cursor-pointer"
                                                 >
-                                                    <option value="" className="bg-[#1a1a2e]">선택해주세요</option>
+                                                    <option value="" className="bg-[#1a1a2e]">{t("form.typePlaceholder")}</option>
                                                     {inquiryTypes.map((type) => (
                                                         <option key={type.value} value={type.value} className="bg-[#1a1a2e]">
                                                             {type.label}
@@ -242,7 +227,7 @@ export default function ContactPage() {
 
                                         <div>
                                             <label className="block text-gray-300 text-sm font-medium mb-2">
-                                                문의 내용 *
+                                                {t("form.message")} *
                                             </label>
                                             <textarea
                                                 required
@@ -252,7 +237,7 @@ export default function ContactPage() {
                                                     setFormData({ ...formData, message: e.target.value })
                                                 }
                                                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none"
-                                                placeholder="문의하실 내용을 입력해주세요"
+                                                placeholder={t("form.messagePlaceholder")}
                                             />
                                         </div>
 
@@ -264,12 +249,12 @@ export default function ContactPage() {
                                             {isSubmitting ? (
                                                 <>
                                                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                                                    전송 중...
+                                                    {t("form.submitting")}
                                                 </>
                                             ) : (
                                                 <>
                                                     <Send size={18} />
-                                                    문의 보내기
+                                                    {t("form.submit")}
                                                 </>
                                             )}
                                         </button>
@@ -289,10 +274,10 @@ export default function ContactPage() {
                             <div id="partnership" className="glass-card p-6">
                                 <div className="flex items-center gap-3 mb-4">
                                     <Building className="w-6 h-6 text-purple-400" />
-                                    <h3 className="text-lg font-semibold text-white">파트너십</h3>
+                                    <h3 className="text-lg font-semibold text-white">{t("sidebar.partnership.title")}</h3>
                                 </div>
                                 <p className="text-gray-400 text-sm mb-4">
-                                    기업, 공공기관, 교육기관과의 전략적 파트너십을 환영합니다.
+                                    {t("sidebar.partnership.description")}
                                 </p>
                                 <a href="mailto:partner@nextrun.ai" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
                                     partner@nextrun.ai →
@@ -303,10 +288,10 @@ export default function ContactPage() {
                             <div className="glass-card p-6">
                                 <div className="flex items-center gap-3 mb-4">
                                     <Users className="w-6 h-6 text-cyan-400" />
-                                    <h3 className="text-lg font-semibold text-white">미디어 문의</h3>
+                                    <h3 className="text-lg font-semibold text-white">{t("sidebar.media.title")}</h3>
                                 </div>
                                 <p className="text-gray-400 text-sm mb-4">
-                                    인터뷰, 보도자료 요청은 아래 이메일로 연락주세요.
+                                    {t("sidebar.media.description")}
                                 </p>
                                 <a href="mailto:press@nextrun.ai" className="text-cyan-400 text-sm hover:text-cyan-300 transition-colors">
                                     press@nextrun.ai →
@@ -317,10 +302,10 @@ export default function ContactPage() {
                             <div className="glass-card p-6">
                                 <div className="flex items-center gap-3 mb-4">
                                     <MessageSquare className="w-6 h-6 text-green-400" />
-                                    <h3 className="text-lg font-semibold text-white">기술 지원</h3>
+                                    <h3 className="text-lg font-semibold text-white">{t("sidebar.support.title")}</h3>
                                 </div>
                                 <p className="text-gray-400 text-sm mb-4">
-                                    기존 고객을 위한 기술 지원 창구입니다.
+                                    {t("sidebar.support.description")}
                                 </p>
                                 <a href="mailto:support@nextrun.ai" className="text-green-400 text-sm hover:text-green-300 transition-colors">
                                     support@nextrun.ai →
@@ -342,12 +327,12 @@ export default function ContactPage() {
                     >
                         <HelpCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                            자주 묻는 질문
+                            {t("faq.title")}
                         </h2>
                     </motion.div>
 
                     <div className="space-y-4">
-                        {faqs.map((faq, index) => (
+                        {faqItems.map((faq, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}

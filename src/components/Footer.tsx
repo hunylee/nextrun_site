@@ -1,52 +1,54 @@
+"use client";
+
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-const footerLinks = [
-    {
-        title: "서비스",
-        links: [
-            { label: "아바타 솔루션", href: "/avatar" },
-            { label: "기술 소개", href: "/avatar#technology" },
-            { label: "사례 연구", href: "/avatar#cases" },
-        ],
-    },
-    {
-        title: "회사",
-        links: [
-            { label: "회사소개", href: "/" },
-            { label: "연혁", href: "/history" },
-            { label: "오시는 길", href: "/location" },
-        ],
-    },
-    {
-        title: "지원",
-        links: [
-            { label: "문의하기", href: "/contact" },
-            { label: "FAQ", href: "/contact#faq" },
-            { label: "파트너십", href: "/contact#partnership" },
-        ],
-    },
-];
-
 export default function Footer() {
+    const locale = useLocale();
+    const t = useTranslations("footer");
+
+    const footerLinks = [
+        {
+            title: t("services.title"),
+            links: [
+                { label: t("services.avatar"), href: `/${locale}/avatar` },
+                { label: t("services.tech"), href: `/${locale}/avatar#technology` },
+                { label: t("services.cases"), href: `/${locale}/avatar#cases` },
+            ],
+        },
+        {
+            title: t("company.title"),
+            links: [
+                { label: t("company.about"), href: `/${locale}` },
+                { label: t("company.history"), href: `/${locale}/history` },
+                { label: t("company.location"), href: `/${locale}/location` },
+            ],
+        },
+        {
+            title: t("support.title"),
+            links: [
+                { label: t("support.contact"), href: `/${locale}/contact` },
+                { label: t("support.faq"), href: `/${locale}/contact#faq` },
+                { label: t("support.partnership"), href: `/${locale}/contact#partnership` },
+            ],
+        },
+    ];
+
     return (
         <footer className="bg-[#0a0a0f] border-t border-purple-500/20">
             <div className="max-w-7xl mx-auto px-6 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
                     {/* Company Info */}
                     <div className="lg:col-span-2">
-                        <Link href="/" className="flex items-center gap-2 mb-6">
+                        <Link href={`/${locale}`} className="flex items-center gap-2 mb-6">
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
                                 <span className="text-white font-bold text-lg">N</span>
                             </div>
                             <span className="text-xl font-bold gradient-text">NextRun</span>
                         </Link>
-                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                            AI 기반 실사 수화아바타 전문기업
-                            <br />
-                            MediaPipe, sign-gemma3, 모션캡처 기술로
-                            <br />
-                            수화 접근성의 새로운 패러다임을 제시합니다.
+                        <p className="text-gray-400 text-sm leading-relaxed mb-6 whitespace-pre-line">
+                            {t("description")}
                         </p>
                         <div className="flex flex-col gap-3 text-sm text-gray-400">
                             <div className="flex items-center gap-2">
@@ -87,14 +89,14 @@ export default function Footer() {
                 {/* Bottom */}
                 <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm">
-                        © 2024 NextRun. All rights reserved.
+                        {t("copyright")}
                     </p>
                     <div className="flex gap-6 text-sm text-gray-500">
-                        <Link href="/privacy" className="hover:text-purple-400 transition-colors">
-                            개인정보처리방침
+                        <Link href={`/${locale}/privacy`} className="hover:text-purple-400 transition-colors">
+                            {t("privacy")}
                         </Link>
-                        <Link href="/terms" className="hover:text-purple-400 transition-colors">
-                            이용약관
+                        <Link href={`/${locale}/terms`} className="hover:text-purple-400 transition-colors">
+                            {t("terms")}
                         </Link>
                     </div>
                 </div>
