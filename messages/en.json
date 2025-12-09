@@ -1,0 +1,334 @@
+{
+    "nav": {
+        "home": "About",
+        "history": "History",
+        "avatar": "Avatar",
+        "location": "Location",
+        "contact": "Contact",
+        "inquiry": "Inquire"
+    },
+    "home": {
+        "hero": {
+            "badge": "AI-Powered Sign Language Avatar",
+            "title1": "The Future of Sign Language,",
+            "title2": "Connected by AI",
+            "description": "Breaking communication barriers with realistic sign language avatars powered by MediaPipe, sign-gemma3, and motion capture technology",
+            "cta": "Learn More",
+            "contact": "Contact Us"
+        },
+        "features": {
+            "title": "Core Technology",
+            "description": "Creating natural sign language avatars through cutting-edge AI technology",
+            "recognition": {
+                "title": "Sign Recognition",
+                "description": "Precise sign language motion recognition and analysis using MediaPipe"
+            },
+            "ai": {
+                "title": "AI Processing",
+                "description": "Natural sign language generation with sign-gemma3 model"
+            },
+            "avatar": {
+                "title": "Realistic Avatar",
+                "description": "High-quality photorealistic sign language avatar rendering"
+            }
+        },
+        "stats": {
+            "accuracy": "Recognition Accuracy",
+            "expressions": "Sign Expressions",
+            "availability": "Service Availability",
+            "response": "Response Time"
+        },
+        "about": {
+            "title1": "What is",
+            "title2": "NextRun?",
+            "description1": "NextRun is a startup pioneering a new paradigm in sign language interpretation through AI technology. We are developing innovative photorealistic sign language avatar technology to break down communication barriers between the deaf and hearing communities.",
+            "description2": "By combining Google's MediaPipe, sign-gemma3 model, and advanced motion capture glove technology, we precisely recognize sign language interpreters' movements and render them as natural, realistic avatars.",
+            "link": "View Company History",
+            "tagline": "Delivering the beauty of sign language through AI"
+        },
+        "values": {
+            "title": "Our Values",
+            "description": "The core values that NextRun pursues",
+            "accessibility": {
+                "title": "Accessibility Innovation",
+                "description": "Creating a world where everyone has equal access to information."
+            },
+            "technology": {
+                "title": "Technology Leadership",
+                "description": "Setting new standards in sign language interpretation with cutting-edge AI."
+            },
+            "quality": {
+                "title": "Quality Excellence",
+                "description": "Achieving natural and accurate expressions at professional interpreter level."
+            }
+        },
+        "cta": {
+            "title1": "Building Together",
+            "title2": "An Accessible World",
+            "description": "If you'd like to learn more about NextRun's AI sign language avatar solution, please don't hesitate to contact us.",
+            "button": "Contact Us"
+        }
+    },
+    "history": {
+        "badge": "Our Journey",
+        "title": "NextRun's Journey",
+        "description": "Writing a new chapter in sign language accessibility",
+        "2024": {
+            "title": "Global Expansion",
+            "dec": "Preparing for Japan market entry",
+            "oct": "Series A funding secured",
+            "jul": "Sign Avatar 2.0 released",
+            "mar": "Partnership with Google established"
+        },
+        "2023": {
+            "title": "Rapid Growth",
+            "nov": "sign-gemma3 based avatar engine completed",
+            "aug": "Seed funding secured ($800K)",
+            "may": "MediaPipe-based sign recognition system developed",
+            "feb": "Motion capture glove prototype completed"
+        },
+        "2022": {
+            "title": "Technology Development",
+            "oct": "AI sign recognition algorithm patent filed",
+            "jul": "Core R&D team assembled",
+            "apr": "Startup support program selected"
+        },
+        "2021": {
+            "title": "Company Founded",
+            "dec": "Company incorporation",
+            "sep": "Co-founding team formed",
+            "jun": "Ideation and market research"
+        },
+        "future": {
+            "title": "Future Plans",
+            "description": "In 2025, we plan to launch multi-language sign support along with real-time video call sign interpretation. We're moving forward toward a world where everyone can communicate without language barriers."
+        }
+    },
+    "avatar": {
+        "badge": "AI Sign Language Avatar",
+        "title1": "Photorealistic",
+        "title2": "Sign Language Avatar",
+        "description": "Experience natural and accurate sign language expressions created by AI - meet our lifelike avatars that perform like real interpreters",
+        "demo": "Avatar Demo Video",
+        "comingSoon": "Coming Soon",
+        "pipeline": {
+            "title": "Technology Pipeline",
+            "description": "The process of transforming sign language video into AI avatars",
+            "step1": {
+                "title": "Sign Capture",
+                "description": "Real-time capture of interpreter's precise movements using motion capture gloves and cameras"
+            },
+            "step2": {
+                "title": "Motion Recognition",
+                "description": "Precise analysis of finger, wrist, and arm movements through MediaPipe"
+            },
+            "step3": {
+                "title": "AI Processing",
+                "description": "Interpreting sign motions and generating natural expressions with sign-gemma3"
+            },
+            "step4": {
+                "title": "Avatar Generation",
+                "description": "High-quality realistic avatar naturally performing sign language"
+            }
+        },
+        "features": {
+            "title": "Key Features",
+            "description": "Differentiating capabilities of NextRun's sign language avatar",
+            "realtime": {
+                "title": "Real-time Processing",
+                "description": "Fast response within 0.5 seconds for natural conversation flow"
+            },
+            "expressions": {
+                "title": "Rich Expressions",
+                "description": "Support for 50+ sign expressions and emotional expressions"
+            },
+            "multilang": {
+                "title": "Multi-language Support",
+                "description": "Starting with KSL, expanding to global sign languages"
+            },
+            "custom": {
+                "title": "Customizable Avatars",
+                "description": "Choose from various appearances and styles"
+            }
+        },
+        "useCases": {
+            "title": "Use Cases",
+            "description": "Sign language avatar solutions across various industries",
+            "public": {
+                "title": "Public Services",
+                "description": "Guidance services for the deaf at government offices, hospitals, banks"
+            },
+            "education": {
+                "title": "Education",
+                "description": "Adding sign interpretation to online courses and educational videos"
+            },
+            "media": {
+                "title": "Media Content",
+                "description": "Embedding sign avatars in news, dramas, YouTube videos"
+            },
+            "business": {
+                "title": "Business Services",
+                "description": "Customer support, product explanations for enterprises"
+            }
+        },
+        "cta": {
+            "title": "Interested in adopting sign avatars?",
+            "description": "We provide customized solutions for enterprises, public institutions, and educational organizations",
+            "button": "Inquire Now",
+            "partnership": "Partnership Inquiry"
+        }
+    },
+    "location": {
+        "badge": "Location",
+        "title": "Visit Us",
+        "description": "Directions to NextRun headquarters",
+        "address": {
+            "label": "Address",
+            "value": "5F, NextRun Building\n123 Teheran-ro, Gangnam-gu, Seoul"
+        },
+        "phone": {
+            "label": "Phone",
+            "value": "02-1234-5678"
+        },
+        "email": {
+            "label": "Email",
+            "value": "contact@nextrun.ai"
+        },
+        "hours": {
+            "label": "Business Hours",
+            "value": "Weekdays 09:00 - 18:00\n(Closed on weekends and holidays)"
+        },
+        "transport": {
+            "title": "Transportation",
+            "subway": {
+                "title": "Subway",
+                "description": "5 min walk from Gangnam Station Exit 3 (Line 2)"
+            },
+            "bus": {
+                "title": "Bus",
+                "description": "Gangnam Station stop (Bus 146, 341, 360, 740)"
+            },
+            "car": {
+                "title": "Parking",
+                "description": "Underground parking available (2 hours free)"
+            }
+        },
+        "notice": {
+            "title": "Before Your Visit",
+            "items": [
+                "Please contact us in advance for a smoother visit experience.",
+                "Pick up your visitor badge at the 1st floor information desk before heading to the 5th floor.",
+                "Parking is available on basement levels 1-3, with 2 hours free for visitors.",
+                "Wheelchair-accessible elevators and disabled parking spaces are available."
+            ]
+        }
+    },
+    "contact": {
+        "badge": "Contact Us",
+        "title": "Get in Touch",
+        "description": "If you have any questions about our AI sign language avatar solution, please feel free to contact us",
+        "methods": {
+            "email": {
+                "title": "Email",
+                "value": "contact@nextrun.ai",
+                "description": "Response within 24 hours"
+            },
+            "phone": {
+                "title": "Phone",
+                "value": "02-1234-5678",
+                "description": "Weekdays 09:00 - 18:00"
+            },
+            "visit": {
+                "title": "Visit",
+                "value": "123 Teheran-ro, Gangnam-gu, Seoul",
+                "description": "By appointment only"
+            }
+        },
+        "form": {
+            "title": "Contact Form",
+            "name": "Name",
+            "namePlaceholder": "John Doe",
+            "email": "Email",
+            "emailPlaceholder": "email@example.com",
+            "company": "Company/Organization",
+            "companyPlaceholder": "(Optional)",
+            "type": "Inquiry Type",
+            "typePlaceholder": "Please select",
+            "types": {
+                "product": "Product Inquiry",
+                "partnership": "Partnership Inquiry",
+                "demo": "Demo Request",
+                "support": "Technical Support",
+                "other": "Other"
+            },
+            "message": "Message",
+            "messagePlaceholder": "Please enter your message",
+            "submit": "Send Message",
+            "submitting": "Sending...",
+            "success": {
+                "title": "Message Sent!",
+                "description": "We'll get back to you soon.",
+                "newInquiry": "Send Another"
+            }
+        },
+        "sidebar": {
+            "partnership": {
+                "title": "Partnership",
+                "description": "We welcome strategic partnerships with enterprises, public institutions, and educational organizations."
+            },
+            "media": {
+                "title": "Media Inquiries",
+                "description": "For interviews and press releases, please contact:"
+            },
+            "support": {
+                "title": "Technical Support",
+                "description": "Technical support channel for existing customers."
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+                {
+                    "question": "How much does sign avatar adoption cost?",
+                    "answer": "Pricing varies based on scale and requirements. We offer various plans from basic subscription to enterprise custom solutions. Contact us through the inquiry form for a detailed quote."
+                },
+                {
+                    "question": "Can I try a demo?",
+                    "answer": "Yes, both online demos and offline demonstrations are available. Submit a demo request and our team will contact you to schedule."
+                },
+                {
+                    "question": "Which sign languages are supported?",
+                    "answer": "We currently support Korean Sign Language (KSL). In 2025, we plan to add American Sign Language (ASL) and Japanese Sign Language (JSL) support."
+                },
+                {
+                    "question": "Is API integration available?",
+                    "answer": "Yes, you can easily integrate with existing systems via REST API. We provide detailed technical documentation and SDK."
+                }
+            ]
+        }
+    },
+    "footer": {
+        "description": "AI-powered realistic sign language avatar specialists. Pioneering a new paradigm in sign language accessibility with MediaPipe, sign-gemma3, and motion capture technology.",
+        "services": {
+            "title": "Services",
+            "avatar": "Avatar Solution",
+            "tech": "Technology",
+            "cases": "Case Studies"
+        },
+        "company": {
+            "title": "Company",
+            "about": "About Us",
+            "history": "History",
+            "location": "Location"
+        },
+        "support": {
+            "title": "Support",
+            "contact": "Contact Us",
+            "faq": "FAQ",
+            "partnership": "Partnership"
+        },
+        "copyright": "© 2024 NextRun. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    }
+}

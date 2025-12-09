@@ -1,0 +1,334 @@
+{
+    "nav": {
+        "home": "会社紹介",
+        "history": "沿革",
+        "avatar": "アバター紹介",
+        "location": "アクセス",
+        "contact": "お問い合わせ",
+        "inquiry": "お問い合わせ"
+    },
+    "home": {
+        "hero": {
+            "badge": "AI手話アバター",
+            "title1": "手話の未来を、",
+            "title2": "AIでつなぐ",
+            "description": "MediaPipeとsign-gemma3、モーションキャプチャ技術を組み合わせ、リアルな手話アバターでコミュニケーションの壁を取り払います",
+            "cta": "アバター紹介",
+            "contact": "お問い合わせ"
+        },
+        "features": {
+            "title": "コア技術",
+            "description": "最先端AI技術の組み合わせで自然な手話アバターを実現",
+            "recognition": {
+                "title": "手話認識",
+                "description": "MediaPipeによる精密な手話動作の認識と分析"
+            },
+            "ai": {
+                "title": "AI処理",
+                "description": "sign-gemma3モデルによる自然な手話生成"
+            },
+            "avatar": {
+                "title": "リアルアバター",
+                "description": "高品質なフォトリアル手話アバターのレンダリング"
+            }
+        },
+        "stats": {
+            "accuracy": "認識精度",
+            "expressions": "手話表現",
+            "availability": "サービス可用性",
+            "response": "応答速度"
+        },
+        "about": {
+            "title1": "NextRun",
+            "title2": "とは？",
+            "description1": "NextRunは、AI技術を活用して手話通訳の新しいパラダイムを提示するスタートアップです。聴覚障害者と健聴者の間のコミュニケーション障壁を取り除くため、革新的なリアル手話アバター技術を開発しています。",
+            "description2": "GoogleのMediaPipeとsign-gemma3モデル、そして先端モーションキャプチャグローブ技術を組み合わせ、手話通訳者の動作を精密に認識し、自然なリアルアバターとしてレンダリングします。",
+            "link": "会社沿革を見る",
+            "tagline": "手話の美しさをAIで届ける"
+        },
+        "values": {
+            "title": "私たちの価値観",
+            "description": "NextRunが追求する核心価値",
+            "accessibility": {
+                "title": "アクセシビリティ革新",
+                "description": "すべての人が平等に情報にアクセスできる世界を創ります。"
+            },
+            "technology": {
+                "title": "技術リーダーシップ",
+                "description": "最新AI技術で手話通訳の新しい基準を提示します。"
+            },
+            "quality": {
+                "title": "品質追求",
+                "description": "プロの手話通訳者レベルの自然で正確な表現を実現します。"
+            }
+        },
+        "cta": {
+            "title1": "共に創る",
+            "title2": "アクセシブルな世界",
+            "description": "NextRunのAI手話アバターソリューションについて詳しく知りたい方は、お気軽にお問い合わせください。",
+            "button": "お問い合わせ"
+        }
+    },
+    "history": {
+        "badge": "Our Journey",
+        "title": "NextRunの歩み",
+        "description": "手話アクセシビリティの新しい歴史を刻むNextRunの物語",
+        "2024": {
+            "title": "グローバル展開",
+            "dec": "日本市場参入準備",
+            "oct": "シリーズA資金調達",
+            "jul": "手話アバター2.0リリース",
+            "mar": "Googleとパートナーシップ締結"
+        },
+        "2023": {
+            "title": "本格成長",
+            "nov": "sign-gemma3ベースアバターエンジン開発完了",
+            "aug": "シード資金調達（10億ウォン）",
+            "may": "MediaPipeベース手話認識システム開発",
+            "feb": "モーションキャプチャグローブプロトタイプ完成"
+        },
+        "2022": {
+            "title": "技術開発",
+            "oct": "AI手話認識アルゴリズム特許出願",
+            "jul": "コアR&Dチーム構成",
+            "apr": "スタートアップ支援事業選定"
+        },
+        "2021": {
+            "title": "会社設立",
+            "dec": "法人設立",
+            "sep": "共同創業チーム結成",
+            "jun": "アイデア構想と市場調査"
+        },
+        "future": {
+            "title": "今後の計画",
+            "description": "2025年には多言語手話サポートとリアルタイムビデオ通話手話通訳機能をリリース予定です。言語の壁なく誰もがコミュニケーションできる世界に向けて進みます。"
+        }
+    },
+    "avatar": {
+        "badge": "AI手話アバター",
+        "title1": "リアル",
+        "title2": "手話アバター",
+        "description": "AIが創り出す自然で正確な手話表現、実際の手話通訳者のように生き生きとしたアバターをご体験ください",
+        "demo": "アバターデモ動画",
+        "comingSoon": "Coming Soon",
+        "pipeline": {
+            "title": "技術パイプライン",
+            "description": "手話映像がAIアバターに変換される過程",
+            "step1": {
+                "title": "手話キャプチャ",
+                "description": "モーションキャプチャグローブとカメラで手話通訳者の精密な動作をリアルタイムキャプチャ"
+            },
+            "step2": {
+                "title": "動作認識",
+                "description": "MediaPipeで指、手首、腕の動作を精密に分析"
+            },
+            "step3": {
+                "title": "AI処理",
+                "description": "sign-gemma3モデルで手話動作を解釈し自然な表現を生成"
+            },
+            "step4": {
+                "title": "アバター生成",
+                "description": "高品質リアルアバターが自然に手話を表現"
+            }
+        },
+        "features": {
+            "title": "主な特徴",
+            "description": "NextRun手話アバターならではの差別化機能",
+            "realtime": {
+                "title": "リアルタイム処理",
+                "description": "0.5秒以内の高速応答で自然な会話フローを維持"
+            },
+            "expressions": {
+                "title": "豊富な表現",
+                "description": "50種類以上の手話表現と感情表現をサポート"
+            },
+            "multilang": {
+                "title": "多言語対応",
+                "description": "韓国手話(KSL)からグローバル手話サポートへ拡大"
+            },
+            "custom": {
+                "title": "カスタムアバター",
+                "description": "様々な外見とスタイルのアバターを選択可能"
+            }
+        },
+        "useCases": {
+            "title": "活用事例",
+            "description": "様々な分野で活用される手話アバターソリューション",
+            "public": {
+                "title": "公共機関案内",
+                "description": "官公庁、病院、銀行などでの聴覚障害者向け案内サービス"
+            },
+            "education": {
+                "title": "教育コンテンツ",
+                "description": "オンライン講座、教育動画に手話通訳を追加"
+            },
+            "media": {
+                "title": "メディアコンテンツ",
+                "description": "ニュース、ドラマ、YouTube動画に手話アバターを挿入"
+            },
+            "business": {
+                "title": "企業サービス",
+                "description": "カスタマーサポート、製品説明などの企業サービスに適用"
+            }
+        },
+        "cta": {
+            "title": "手話アバター導入をご検討ですか？",
+            "description": "企業、公共機関、教育機関など様々な分野にカスタマイズソリューションを提供します",
+            "button": "導入のお問い合わせ",
+            "partnership": "パートナーシップのお問い合わせ"
+        }
+    },
+    "location": {
+        "badge": "Location",
+        "title": "アクセス",
+        "description": "NextRun本社へのアクセス方法をご案内します",
+        "address": {
+            "label": "住所",
+            "value": "ソウル特別市江南区テヘラン路123\nNextRunビル5階"
+        },
+        "phone": {
+            "label": "電話",
+            "value": "02-1234-5678"
+        },
+        "email": {
+            "label": "メール",
+            "value": "contact@nextrun.ai"
+        },
+        "hours": {
+            "label": "営業時間",
+            "value": "平日 09:00 - 18:00\n（土日祝日休業）"
+        },
+        "transport": {
+            "title": "交通案内",
+            "subway": {
+                "title": "地下鉄",
+                "description": "2号線江南駅3番出口から徒歩5分"
+            },
+            "bus": {
+                "title": "バス",
+                "description": "江南駅停留所下車（146, 341, 360, 740）"
+            },
+            "car": {
+                "title": "お車",
+                "description": "地下駐車場利用可能（2時間無料）"
+            }
+        },
+        "notice": {
+            "title": "ご来社前のご案内",
+            "items": [
+                "ご来社日程は事前にご連絡いただけますとスムーズにご案内できます。",
+                "1階受付で入館証を受け取り、5階までお越しください。",
+                "駐車は地下1〜3階で可能、ご来客様は2時間無料です。",
+                "車椅子対応エレベーター、障害者用駐車スペースをご用意しております。"
+            ]
+        }
+    },
+    "contact": {
+        "badge": "Contact Us",
+        "title": "お問い合わせ",
+        "description": "AI手話アバターソリューションについてご不明な点がございましたら、お気軽にお問い合わせください",
+        "methods": {
+            "email": {
+                "title": "メール",
+                "value": "contact@nextrun.ai",
+                "description": "24時間以内に返信いたします"
+            },
+            "phone": {
+                "title": "電話",
+                "value": "02-1234-5678",
+                "description": "平日 09:00 - 18:00"
+            },
+            "visit": {
+                "title": "ご来社",
+                "value": "ソウル市江南区テヘラン路123",
+                "description": "事前予約制"
+            }
+        },
+        "form": {
+            "title": "お問い合わせフォーム",
+            "name": "お名前",
+            "namePlaceholder": "山田太郎",
+            "email": "メールアドレス",
+            "emailPlaceholder": "email@example.com",
+            "company": "会社/団体名",
+            "companyPlaceholder": "（任意）",
+            "type": "お問い合わせ種別",
+            "typePlaceholder": "選択してください",
+            "types": {
+                "product": "製品のお問い合わせ",
+                "partnership": "パートナーシップ",
+                "demo": "デモリクエスト",
+                "support": "技術サポート",
+                "other": "その他"
+            },
+            "message": "お問い合わせ内容",
+            "messagePlaceholder": "お問い合わせ内容をご入力ください",
+            "submit": "送信する",
+            "submitting": "送信中...",
+            "success": {
+                "title": "お問い合わせを受け付けました！",
+                "description": "できるだけ早くご返信いたします。",
+                "newInquiry": "新規お問い合わせ"
+            }
+        },
+        "sidebar": {
+            "partnership": {
+                "title": "パートナーシップ",
+                "description": "企業、公共機関、教育機関との戦略的パートナーシップを歓迎します。"
+            },
+            "media": {
+                "title": "メディアのお問い合わせ",
+                "description": "取材、プレスリリースのご依頼は下記メールへ。"
+            },
+            "support": {
+                "title": "技術サポート",
+                "description": "既存のお客様向け技術サポート窓口です。"
+            }
+        },
+        "faq": {
+            "title": "よくあるご質問",
+            "items": [
+                {
+                    "question": "手話アバター導入費用はいくらですか？",
+                    "answer": "導入費用は規模やご要件によって異なります。基本サブスクリプションから企業向けカスタムプランまで様々なプランをご用意しております。詳しいお見積もりはお問い合わせフォームからご相談ください。"
+                },
+                {
+                    "question": "デモを体験できますか？",
+                    "answer": "はい、オンラインデモとオフラインデモの両方が可能です。デモリクエストをいただければ、担当者からご連絡してスケジュールを調整いたします。"
+                },
+                {
+                    "question": "どの手話に対応していますか？",
+                    "answer": "現在、韓国手話(KSL)に対応しています。2025年にはアメリカ手話(ASL)と日本手話(JSL)のサポートを予定しています。"
+                },
+                {
+                    "question": "API連携は可能ですか？",
+                    "answer": "はい、REST APIで既存システムに簡単に連携できます。詳細な技術ドキュメントとSDKを提供いたします。"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "description": "AI搭載リアル手話アバター専門企業。MediaPipe、sign-gemma3、モーションキャプチャ技術で手話アクセシビリティの新しいパラダイムを提示します。",
+        "services": {
+            "title": "サービス",
+            "avatar": "アバターソリューション",
+            "tech": "技術紹介",
+            "cases": "事例紹介"
+        },
+        "company": {
+            "title": "会社",
+            "about": "会社紹介",
+            "history": "沿革",
+            "location": "アクセス"
+        },
+        "support": {
+            "title": "サポート",
+            "contact": "お問い合わせ",
+            "faq": "FAQ",
+            "partnership": "パートナーシップ"
+        },
+        "copyright": "© 2024 NextRun. All rights reserved.",
+        "privacy": "プライバシーポリシー",
+        "terms": "利用規約"
+    }
+}
