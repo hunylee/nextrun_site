@@ -73,35 +73,14 @@
         "badge": "Our Journey",
         "title": "NextRun's Journey",
         "description": "Writing a new chapter in sign language accessibility",
-        "2024": {
-            "title": "Global Expansion",
-            "dec": "Preparing for Japan market entry",
-            "oct": "Series A funding secured",
-            "jul": "Sign Avatar 2.0 released",
-            "mar": "Partnership with Google established"
-        },
-        "2023": {
-            "title": "Rapid Growth",
-            "nov": "sign-gemma3 based avatar engine completed",
-            "aug": "Seed funding secured ($800K)",
-            "may": "MediaPipe-based sign recognition system developed",
-            "feb": "Motion capture glove prototype completed"
-        },
-        "2022": {
-            "title": "Technology Development",
-            "oct": "AI sign recognition algorithm patent filed",
-            "jul": "Core R&D team assembled",
-            "apr": "Startup support program selected"
-        },
-        "2021": {
+        "2025": {
             "title": "Company Founded",
-            "dec": "Company incorporation",
-            "sep": "Co-founding team formed",
-            "jun": "Ideation and market research"
+            "nov": "Business collaboration meetings with Osaka Deaf Association and avita Inc. in Tokyo, Japan",
+            "sep": "Sole proprietorship registered (Sep 22, 2025)"
         },
         "future": {
             "title": "Future Plans",
-            "description": "In 2025, we plan to launch multi-language sign support along with real-time video call sign interpretation. We're moving forward toward a world where everyone can communicate without language barriers."
+            "description": "We are preparing to incorporate as a corporation in 2026. We plan to launch multi-language sign support along with real-time video call sign interpretation. We are actively pursuing partnerships for Japan market entry. We're moving forward toward a world where everyone can communicate without language barriers."
         }
     },
     "avatar": {
@@ -327,7 +306,7 @@
             "faq": "FAQ",
             "partnership": "Partnership"
         },
-        "copyright": "© 2024 NextRun. All rights reserved.",
+        "copyright": "© 2025 NextRun. All rights reserved.",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service"
     }

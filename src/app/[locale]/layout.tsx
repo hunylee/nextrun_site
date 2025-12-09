@@ -42,8 +42,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     const messages = await getMessages();
 
     return (
-        <html lang={locale}>
-            <body className={`${notoSansKr.variable} antialiased bg-gradient-animated`}>
+        <html lang={locale} suppressHydrationWarning>
+            <body className={`${notoSansKr.variable} antialiased bg-gradient-animated`} suppressHydrationWarning>
                 <NextIntlClientProvider messages={messages}>
                     <Header />
                     <main className="min-h-screen">

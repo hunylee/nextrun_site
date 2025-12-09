@@ -10,45 +10,12 @@ export default function HistoryPage() {
 
     const timeline = [
         {
-            year: "2024",
-            title: t("2024.title"),
+            year: "2025",
+            title: t("2025.title"),
             icon: Globe,
             events: [
-                { month: locale === 'en' ? 'Dec' : locale === 'ja' ? '12月' : '12월', description: t("2024.dec") },
-                { month: locale === 'en' ? 'Oct' : locale === 'ja' ? '10月' : '10월', description: t("2024.oct") },
-                { month: locale === 'en' ? 'Jul' : locale === 'ja' ? '7月' : '7월', description: t("2024.jul") },
-                { month: locale === 'en' ? 'Mar' : locale === 'ja' ? '3月' : '3월', description: t("2024.mar") },
-            ],
-        },
-        {
-            year: "2023",
-            title: t("2023.title"),
-            icon: Rocket,
-            events: [
-                { month: locale === 'en' ? 'Nov' : locale === 'ja' ? '11月' : '11월', description: t("2023.nov") },
-                { month: locale === 'en' ? 'Aug' : locale === 'ja' ? '8月' : '8월', description: t("2023.aug") },
-                { month: locale === 'en' ? 'May' : locale === 'ja' ? '5月' : '5월', description: t("2023.may") },
-                { month: locale === 'en' ? 'Feb' : locale === 'ja' ? '2月' : '2월', description: t("2023.feb") },
-            ],
-        },
-        {
-            year: "2022",
-            title: t("2022.title"),
-            icon: Award,
-            events: [
-                { month: locale === 'en' ? 'Oct' : locale === 'ja' ? '10月' : '10월', description: t("2022.oct") },
-                { month: locale === 'en' ? 'Jul' : locale === 'ja' ? '7月' : '7월', description: t("2022.jul") },
-                { month: locale === 'en' ? 'Apr' : locale === 'ja' ? '4月' : '4월', description: t("2022.apr") },
-            ],
-        },
-        {
-            year: "2021",
-            title: t("2021.title"),
-            icon: Building,
-            events: [
-                { month: locale === 'en' ? 'Dec' : locale === 'ja' ? '12月' : '12월', description: t("2021.dec") },
-                { month: locale === 'en' ? 'Sep' : locale === 'ja' ? '9月' : '9월', description: t("2021.sep") },
-                { month: locale === 'en' ? 'Jun' : locale === 'ja' ? '6月' : '6월', description: t("2021.jun") },
+                { month: locale === 'en' ? 'Nov' : locale === 'ja' ? '11月' : '11월', description: t("2025.nov") },
+                { month: locale === 'en' ? 'Sep' : locale === 'ja' ? '9月' : '9월', description: t("2025.sep") },
             ],
         },
     ];
