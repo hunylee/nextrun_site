@@ -10,41 +10,41 @@
     "home": {
         "hero": {
             "badge": "AI-Powered Sign Language Avatar",
-            "title1": "수화의 미래,",
+            "title1": "수어의 미래,",
             "title2": "AI로 연결합니다",
-            "description": "MediaPipe와 sign-gemma3, 모션캡처 기술을 결합하여 실사 수화 아바타로 소통의 장벽을 허물어갑니다",
+            "description": "MediaPipe와 sign-gemma3, 모션캡처 장갑을 결합하여 실사 수어 아바타로 소통의 장벽을 허물어갑니다",
             "cta": "아바타 소개",
             "contact": "문의하기"
         },
         "features": {
             "title": "핵심 기술",
-            "description": "최첨단 AI 기술의 조합으로 자연스러운 수화 아바타를 구현합니다",
+            "description": "최첨단 AI 기술의 조합으로 자연스러운 수어 아바타를 구현합니다",
             "recognition": {
-                "title": "수화 인식",
-                "description": "MediaPipe 기반 정밀 수화 동작 인식 및 분석"
+                "title": "수어 인식",
+                "description": "MediaPipe 기반 정밀 수어 동작 인식 및 분석"
             },
             "ai": {
                 "title": "AI 처리",
-                "description": "sign-gemma3 모델로 자연스러운 수화 생성"
+                "description": "sign-gemma3 모델로 자연스러운 수어 생성"
             },
             "avatar": {
                 "title": "실사 아바타",
-                "description": "고품질 실사 기반 수화 아바타 렌더링"
+                "description": "고품질 실사 기반 수어 아바타 렌더링"
             }
         },
         "stats": {
             "accuracy": "인식 정확도",
-            "expressions": "수화 표현",
+            "expressions": "수어 표현",
             "availability": "서비스 가용성",
             "response": "응답 속도"
         },
         "about": {
             "title1": "NextRun",
             "title2": "은 어떤 회사인가요?",
-            "description1": "NextRun은 AI 기술을 활용하여 수화 통역의 새로운 패러다임을 제시하는 스타트업입니다. 우리는 청각 장애인과 비장애인 사이의 소통 장벽을 허물기 위해 혁신적인 실사 수화 아바타 기술을 개발하고 있습니다.",
-            "description2": "Google의 MediaPipe와 sign-gemma3 모델, 그리고 첨단 모션캡처 장갑 기술을 결합하여 수화통역사의 동작을 정밀하게 인식하고, 이를 자연스러운 실사 아바타로 렌더링합니다.",
+            "description1": "NextRun은 AI 기술을 활용하여 수어 통역의 새로운 패러다임을 제시하는 스타트업입니다. 우리는 청각 장애인과 비장애인 사이의 소통 장벽을 허물기 위해 혁신적인 실사 수어 아바타 기술을 개발하고 있습니다.",
+            "description2": "Google의 MediaPipe와 sign-gemma3 모델, 그리고 첨단 모션캡처 장갑 기술을 결합하여 수어통역사의 동작을 정밀하게 인식하고, 이를 자연스러운 실사 아바타로 렌더링합니다.",
             "link": "회사 연혁 보기",
-            "tagline": "수화의 아름다움을 AI로 전달합니다"
+            "tagline": "수어의 아름다움을 AI로 전달합니다"
         },
         "values": {
             "title": "우리의 가치",
@@ -55,24 +55,24 @@
             },
             "technology": {
                 "title": "기술 선도",
-                "description": "최신 AI 기술을 활용해 수화 통역의 새로운 표준을 제시합니다."
+                "description": "최신 AI 기술을 활용해 수어 통역의 새로운 표준을 제시합니다."
             },
             "quality": {
                 "title": "품질 추구",
-                "description": "실제 수화통역사 수준의 자연스럽고 정확한 표현을 구현합니다."
+                "description": "실제 수어통역사 수준의 자연스럽고 정확한 표현을 구현합니다."
             }
         },
         "cta": {
             "title1": "함께 만들어가는",
             "title2": "접근성 있는 세상",
-            "description": "NextRun의 AI 수화 아바타 솔루션에 대해 더 알고 싶으시다면 언제든 문의해주세요.",
+            "description": "NextRun의 AI 수어 아바타 솔루션에 대해 더 알고 싶으시다면 언제든 문의해주세요.",
             "button": "문의하기"
         }
     },
     "history": {
         "badge": "Our Journey",
         "title": "NextRun의 여정",
-        "description": "수화 접근성의 새로운 역사를 써 내려가는 NextRun의 이야기",
+        "description": "수어 접근성의 새로운 역사를 써 내려가는 NextRun의 이야기",
         "2025": {
             "title": "회사 설립",
             "nov": "일본 오사카농아인협회 및 도쿄 avita社와 업무 협력 미팅 진행",
@@ -80,22 +80,22 @@
         },
         "future": {
             "title": "앞으로의 계획",
-            "description": "2026년 법인 전환을 준비하고 있으며, 다국어 수화 지원과 함께 실시간 화상 통화 수화 통역 기능을 출시할 예정입니다. 일본 시장 진출을 위한 파트너십을 적극 추진하고 있습니다. 모든 사람이 언어의 장벽 없이 소통할 수 있는 세상을 위해 나아갑니다."
+            "description": "2026년 법인 전환을 준비하고 있으며, 다국어 수어 지원과 함께 실시간 화상 통화 수어 통역 기능을 출시할 예정입니다. 일본 시장 진출을 위한 파트너십을 적극 추진하고 있습니다. 모든 사람이 언어의 장벽 없이 소통할 수 있는 세상을 위해 나아갑니다."
         }
     },
     "avatar": {
         "badge": "AI Sign Language Avatar",
         "title1": "실사",
-        "title2": "수화 아바타",
-        "description": "AI가 만들어내는 자연스럽고 정확한 수화 표현, 실제 수화통역사처럼 생동감 있는 아바타를 만나보세요",
+        "title2": "수어 아바타",
+        "description": "AI가 만들어내는 자연스럽고 정확한 수어 표현, 실제 수어통역사처럼 생동감 있는 아바타를 만나보세요",
         "demo": "아바타 데모 영상",
         "comingSoon": "Coming Soon",
         "pipeline": {
             "title": "기술 파이프라인",
-            "description": "수화 영상이 AI 아바타로 변환되는 과정",
+            "description": "수어 영상이 AI 아바타로 변환되는 과정",
             "step1": {
-                "title": "수화 캡처",
-                "description": "모션캡처 장갑과 카메라로 수화통역사의 정밀한 동작을 실시간 캡처"
+                "title": "수어 캡처",
+                "description": "모션캡처 장갑과 카메라로 수어통역사의 정밀한 동작을 실시간 캡처"
             },
             "step2": {
                 "title": "동작 인식",
@@ -103,27 +103,27 @@
             },
             "step3": {
                 "title": "AI 처리",
-                "description": "sign-gemma3 모델로 수화 동작을 해석하고 자연스러운 표현 생성"
+                "description": "sign-gemma3 모델로 수어 동작을 해석하고 자연스러운 표현 생성"
             },
             "step4": {
                 "title": "아바타 생성",
-                "description": "고품질 실사 아바타가 자연스럽게 수화를 표현"
+                "description": "고품질 실사 아바타가 자연스럽게 수어를 표현"
             }
         },
         "features": {
             "title": "주요 특징",
-            "description": "NextRun 수화 아바타만의 차별화된 기능",
+            "description": "NextRun 수어 아바타만의 차별화된 기능",
             "realtime": {
                 "title": "실시간 처리",
                 "description": "0.5초 이내의 빠른 응답으로 자연스러운 대화 흐름 유지"
             },
             "expressions": {
                 "title": "다양한 표현",
-                "description": "50가지 이상의 수화 표현과 감정 표현 지원"
+                "description": "50가지 이상의 수어 표현과 감정 표현 지원"
             },
             "multilang": {
                 "title": "다국어 지원",
-                "description": "한국 수화(KSL)를 시작으로 글로벌 수화 지원 확대"
+                "description": "한국 수어(KSL)를 시작으로 글로벌 수어 지원 확대"
             },
             "custom": {
                 "title": "맞춤형 아바타",
@@ -132,18 +132,18 @@
         },
         "useCases": {
             "title": "활용 사례",
-            "description": "다양한 분야에서 활용되는 수화 아바타 솔루션",
+            "description": "다양한 분야에서 활용되는 수어 아바타 솔루션",
             "public": {
                 "title": "공공기관 안내",
                 "description": "관공서, 병원, 은행 등에서 청각장애인을 위한 안내 서비스"
             },
             "education": {
                 "title": "교육 콘텐츠",
-                "description": "온라인 강의, 교육 영상에 수화 통역 추가"
+                "description": "온라인 강의, 교육 영상에 수어 통역 추가"
             },
             "media": {
                 "title": "미디어 콘텐츠",
-                "description": "뉴스, 드라마, 유튜브 영상에 수화 아바타 삽입"
+                "description": "뉴스, 드라마, 유튜브 영상에 수어 아바타 삽입"
             },
             "business": {
                 "title": "기업 서비스",
@@ -151,7 +151,7 @@
             }
         },
         "cta": {
-            "title": "수화 아바타 도입을 원하시나요?",
+            "title": "수어 아바타 도입을 원하시나요?",
             "description": "기업, 공공기관, 교육기관 등 다양한 분야에 맞춤형 솔루션을 제공합니다",
             "button": "도입 문의",
             "partnership": "파트너십 문의"
@@ -205,7 +205,7 @@
     "contact": {
         "badge": "Contact Us",
         "title": "문의하기",
-        "description": "AI 수화 아바타 솔루션에 대해 궁금한 점이 있으시면 언제든 연락해 주세요",
+        "description": "AI 수어 아바타 솔루션에 대해 궁금한 점이 있으시면 언제든 연락해 주세요",
         "methods": {
             "email": {
                 "title": "이메일",
@@ -268,7 +268,7 @@
             "title": "자주 묻는 질문",
             "items": [
                 {
-                    "question": "수화 아바타 도입 비용은 어떻게 되나요?",
+                    "question": "수어 아바타 도입 비용은 어떻게 되나요?",
                     "answer": "도입 비용은 사용 규모와 요구사항에 따라 다릅니다. 기본 구독형부터 기업 맞춤형까지 다양한 플랜을 제공하고 있습니다. 자세한 견적은 문의 양식을 통해 상담받으실 수 있습니다."
                 },
                 {
@@ -276,8 +276,8 @@
                     "answer": "네, 온라인 데모와 오프라인 시연 모두 가능합니다. 데모 요청을 해주시면 담당자가 연락드려 일정을 조율해 드립니다."
                 },
                 {
-                    "question": "어떤 수화를 지원하나요?",
-                    "answer": "현재 한국 수화(KSL)를 지원하고 있으며, 2025년에는 미국 수화(ASL)와 일본 수화(JSL) 지원을 계획하고 있습니다."
+                    "question": "어떤 수어를 지원하나요?",
+                    "answer": "현재 한국 수어(KSL)를 지원하고 있으며, 2025년에는 미국 수어(ASL)와 일본 수어(JSL) 지원을 계획하고 있습니다."
                 },
                 {
                     "question": "API 연동이 가능한가요?",
@@ -287,7 +287,7 @@
         }
     },
     "footer": {
-        "description": "AI 기반 실사 수화아바타 전문기업. MediaPipe, sign-gemma3, 모션캡처 기술로 수화 접근성의 새로운 패러다임을 제시합니다.",
+        "description": "AI 기반 실사 수어아바타 전문기업. MediaPipe, sign-gemma3, 모션캡처 장갑로 수어 접근성의 새로운 패러다임을 제시합니다.",
         "services": {
             "title": "서비스",
             "avatar": "아바타 솔루션",
