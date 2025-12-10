@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
@@ -41,8 +42,8 @@ export default function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-purple-500/20"
-                    : "bg-transparent"
+                ? "bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-purple-500/20"
+                : "bg-transparent"
                 }`}
         >
             <nav className="max-w-7xl mx-auto px-6 py-4">
@@ -50,13 +51,18 @@ export default function Header() {
                     {/* Logo */}
                     <Link href={`/${locale}`} className="flex items-center gap-2">
                         <motion.div
-                            className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <span className="text-white font-bold text-lg">N</span>
+                            <Image
+                                src="/logo.png"
+                                alt="NextRun Logo"
+                                width={120}
+                                height={40}
+                                className="h-10 w-auto"
+                                priority
+                            />
                         </motion.div>
-                        <span className="text-xl font-bold gradient-text">NextRun</span>
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -66,8 +72,8 @@ export default function Header() {
                                 key={item.href}
                                 href={item.href}
                                 className={`relative py-2 text-sm font-medium transition-colors ${isActivePath(item.href)
-                                        ? "text-purple-400"
-                                        : "text-gray-300 hover:text-white"
+                                    ? "text-purple-400"
+                                    : "text-gray-300 hover:text-white"
                                     }`}
                             >
                                 {item.label}
@@ -120,8 +126,8 @@ export default function Header() {
                                         href={item.href}
                                         onClick={() => setIsMobileMenuOpen(false)}
                                         className={`py-2 text-center rounded-lg transition-colors ${isActivePath(item.href)
-                                                ? "bg-purple-500/20 text-purple-400"
-                                                : "text-gray-300 hover:bg-white/5"
+                                            ? "bg-purple-500/20 text-purple-400"
+                                            : "text-gray-300 hover:bg-white/5"
                                             }`}
                                     >
                                         {item.label}

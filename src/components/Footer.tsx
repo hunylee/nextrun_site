@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Mail, MapPin, Phone } from "lucide-react";
 
@@ -42,10 +43,13 @@ export default function Footer() {
                     {/* Company Info */}
                     <div className="lg:col-span-2">
                         <Link href={`/${locale}`} className="flex items-center gap-2 mb-6">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">N</span>
-                            </div>
-                            <span className="text-xl font-bold gradient-text">NextRun</span>
+                            <Image
+                                src="/logo.png"
+                                alt="NextRun Logo"
+                                width={120}
+                                height={40}
+                                className="h-10 w-auto"
+                            />
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed mb-6 whitespace-pre-line">
                             {t("description")}
