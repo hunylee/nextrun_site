@@ -130,20 +130,21 @@ export default function AvatarPage() {
                         className="max-w-4xl mx-auto"
                     >
                         <div className="glass-card p-2 md:p-4">
-                            <div className="aspect-video rounded-xl bg-gradient-to-br from-[#1a1a2e] to-[#0a0a0f] flex items-center justify-center relative overflow-hidden">
-                                <div className="absolute inset-0 grid-pattern opacity-20" />
-                                <div className="text-center z-10">
-                                    <motion.div
-                                        animate={{ scale: [1, 1.1, 1] }}
-                                        transition={{ duration: 2, repeat: Infinity }}
-                                        className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center"
-                                    >
-                                        <Video className="w-16 h-16 text-white" />
-                                    </motion.div>
-                                    <p className="text-gray-400 text-lg">{t("demo")}</p>
-                                    <p className="text-gray-500 text-sm mt-2">{t("comingSoon")}</p>
-                                </div>
+                            <div className="aspect-video rounded-xl overflow-hidden relative">
+                                <video
+                                    className="w-full h-full object-cover"
+                                    controls
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    poster=""
+                                >
+                                    <source src="/videos/demo-avatar.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
+                            <p className="text-center text-gray-400 text-sm mt-4">{t("demo")}</p>
                         </div>
                     </motion.div>
                 </div>
